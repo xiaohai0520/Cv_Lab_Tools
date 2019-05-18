@@ -1,0 +1,87 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div class='container'>
+  
+  <div class="row">
+    <div>
+      <h2 class="col-md-8">Control</h2>
+      <h2 class="col-md-4">Output</h2>
+    </div>
+    <div class="col-md-8">
+      <div>
+        <span>Clip Number:</span>
+        <input type="text" [(ngModel)]="videoNumber"><br>
+        <p>clip title: {{videoname}}</p>
+        <button class="btn btn-primary" (click)='addline1()'>add line</button>
+      </div>
+      <br>
+      <div>
+          <span>Clip Number:</span>
+          <input class = "a" type="text" [(ngModel)]="leftRoundScore" (keyup)="onKey($event)">
+          <input class = "a" type="text" [(ngModel)]="rightRoundScore" (keyup)="onKey($event)">
+          <input class = "a" type="text" [(ngModel)]="leftScore" (keyup)="onKey($event)">
+          <input class = "a" type="text" [(ngModel)]="rightScore" (keyup)="onKey($event)">
+          
+          <button class = "a" (click)="changeWinSide()" (keyup)="onKey($event)">{{winSide}}</button>
+          
+          <br>
+          <p>score: {{score}}</p>
+          <button class="btn btn-primary" (click)='addline2()'>add line</button>
+        </div>
+
+        <br>
+        <div>
+          <span>Frame Index: </span>
+          <input class= "a" type="text" [(ngModel)]="frame" (keyup)="onKey1($event)"><br><br>
+          <button class='b' (click)="changeAction($event)" title="l-serving">l-serving</button>
+          <button class='b' (click)="changeAction($event)" title="l-passing">l-passing</button>
+          <button class='b' (click)="changeAction($event)" title="l-setting">l-setting</button>
+          <button class='b' (click)="changeAction($event)" title="l-spiking">l-spiking</button>
+          <button class='b' (click)="changeAction($event)" title="l-blocking">l-blocking</button>
+          <button class='b' (click)="changeAction($event)" title="l-attacking">l-attacking</button><br>
+          <button class='b' (click)="changeAction($event)" title="r-serving">r-serving</button>
+          <button class='b' (click)="changeAction($event)" title="r-passing">r-passing</button>
+          <button class='b' (click)="changeAction($event)" title="r-setting">r-setting</button>
+          <button class='b' (click)="changeAction($event)" title="r-spiking">r-spiking</button>
+          <button class='b' (click)="changeAction($event)" title="r-blocking">r-blocking</button>
+          <button class='b' (click)="changeAction($event)" title="r-attacking">r-attacking</button><br>
+          <button class='b' (click)="changeAction($event)" title="end">end</button><br>
+          <p>Action: {{lineAction}}</p>
+          <button class="btn btn-primary" (click)='addline3()'>add line</button>
+        </div>
+      </div>
+      <div class="col-lg-4">
+
+        <textarea rows="20" cols="20" [(ngModel)]="output">     
+        </textarea>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+  <br>   
+  <div class='row'>
+    <div class="text-center">
+      <button class='d d1' (click)='delete()'>delete</button>
+      <button class='d d2' (click)='reset()'>reset</button>
+    <div></div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
