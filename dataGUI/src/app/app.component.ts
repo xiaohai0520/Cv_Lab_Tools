@@ -38,6 +38,11 @@ export class AppComponent {
     this.lineAction = this.frame + ' ' + this.action;
   }
 
+  onKey2(event: any){
+    this.videoname = this.videoNumber + '.mp4';
+  }
+
+
   changeAction(event){
     this.action = event.target.title
     this.onKey1(event);

@@ -11,10 +11,10 @@
       <h2 class="col-md-8">Control</h2>
       <h2 class="col-md-4">Output</h2>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 col-sm-12">
       <div>
         <span>Clip Number:</span>
-        <input type="text" [(ngModel)]="videoNumber"><br>
+        <input type="text" [(ngModel)]="videoNumber" (keyup)="onKey2($event)"><br>
         <p>clip title: {{videoname}}</p>
         <button class="btn btn-primary" (click)='addline1()'>add line</button>
       </div>
@@ -42,19 +42,22 @@
           <button class='b' (click)="changeAction($event)" title="l-setting">l-setting</button>
           <button class='b' (click)="changeAction($event)" title="l-spiking">l-spiking</button>
           <button class='b' (click)="changeAction($event)" title="l-blocking">l-blocking</button>
-          <button class='b' (click)="changeAction($event)" title="l-attacking">l-attacking</button><br>
+          <button class='b' (click)="changeAction($event)" title="l-attacking">l-attacking</button>
+          <button class='b' (click)="changeAction($event)" title="l-winpoint">l-winpoint</button><br>
+
           <button class='b' (click)="changeAction($event)" title="r-serving">r-serving</button>
           <button class='b' (click)="changeAction($event)" title="r-passing">r-passing</button>
           <button class='b' (click)="changeAction($event)" title="r-setting">r-setting</button>
           <button class='b' (click)="changeAction($event)" title="r-spiking">r-spiking</button>
           <button class='b' (click)="changeAction($event)" title="r-blocking">r-blocking</button>
-          <button class='b' (click)="changeAction($event)" title="r-attacking">r-attacking</button><br>
+          <button class='b' (click)="changeAction($event)" title="r-attacking">r-attacking</button>
+          <button class='b' (click)="changeAction($event)" title="r-winpoint">r-winpoint</button><br>
           <button class='b' (click)="changeAction($event)" title="end">end</button><br>
           <p>Action: {{lineAction}}</p>
           <button class="btn btn-primary" (click)='addline3()'>add line</button>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-md-4 col-sm-12">
 
         <textarea rows="20" cols="20" [(ngModel)]="output">     
         </textarea>
